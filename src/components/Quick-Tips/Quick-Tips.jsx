@@ -2,7 +2,7 @@ import style from "../../components/Quick-Tips/Quick-Tips.module.css";
 import React, { useState } from "react";
 import bottle1 from "../../assets/bottle1.png";
 import Group from "../../assets/Group.png";
-import Woman from "../../assets/woman.png";
+import woman from "../../assets/woman.png";
 import bed from "../../assets/bed.png";
 import Sleeping from "../../assets/Sleeping.png";
 import life from "../../assets/life.png";
@@ -12,7 +12,7 @@ import { useTranslation } from "react-i18next";
 const tips = [
   { id: 1, text: "Make sure to put your baby to sleep on his back to ensure his safety.", icon: bed },
   { id: 2, text: "Ensure your baby sleeps on their back to reduce the risk of SIDS.", icon: Sleeping },
-  { id: 3, text: "Hold your baby securely when lifting them to prevent falls.", icon: Woman },
+  { id: 3, text: "Hold your baby securely when lifting them to prevent falls.", icon: woman },
   { id: 4, text: "Make sure to breastfeed your baby every 2-3 hours to ensure healthy Growth.", icon: bottle1 },
   { id: 5, text: "Make sure to breastfeed your baby every 2-3 hours to ensure healthy Growth.", icon: life },
 ];
