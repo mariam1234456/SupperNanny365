@@ -1,6 +1,6 @@
 import style from "../How-To/How-To.module.css";
 import React from "react";
-import woman from "../../assets/woman.png";
+import Woman from "../../assets/Woman.png";
 import Sleeping from "../../assets/Sleeping.png";
 import life from "../../assets/life.png";
 import bottle1 from "../../assets/bottle1.png";
@@ -23,7 +23,7 @@ export default function HowTo() {
     },
     {
       id: 3,
-      icon: woman,
+      icon: Woman,
       description:
         "Spending time with your child and engaging in interactive activities enhances emotional connections...",
       bgColor: "bg-[#dac2a9] ",
