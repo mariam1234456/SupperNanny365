@@ -2,7 +2,7 @@ import style from "../../components/Quick-Tips/Quick-Tips.module.css";
 import React, { useState } from "react";
 import bottle1 from "../../assets/bottle1.png";
 import Group from "../../assets/Group.png";
-import Woman from "../../assets/Woman.png";
+import Woman from "../../assets/woman.png";
 import bed from "../../assets/bed.png";
 import Sleeping from "../../assets/Sleeping.png";
 import life from "../../assets/life.png";
