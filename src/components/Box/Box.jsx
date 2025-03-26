@@ -148,9 +148,8 @@
 //     </>
 //   )
 // }
-import { Link, useLocation } from "react-router-dom";
+import { Link } from "react-router-dom";
 import React, { useState } from "react";
-import { useTranslation } from "react-i18next";
 import todo from "../../assets/todo.png";
 import face from "../../assets/facebook.png";
 import insta from "../../assets/instagram.png";
