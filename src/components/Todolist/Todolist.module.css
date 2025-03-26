@@ -1,0 +1,204 @@
+/* Todolist.module.css */
+.todoContainer {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 25px;
+  width: 100%;
+  height: 50vh; /* نفس الـ h-1/2 */
+  --radius: 140px;
+}
+
+.addButton {
+  position: absolute;
+  width: 112px; /* 28 * 4 (بدل w-28) */
+  height: 112px; /* 28 * 4 (بدل h-28) */
+  background-color: #F49AF6;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-size: 2.25rem; /* 36px (بدل text-4xl) */
+  font-weight: bold;
+  border: none;
+  cursor: pointer;
+}
+
+.taskCircle {
+  position: absolute;
+  width: 112px;
+  height: 112px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 8px;
+  border: 2px solid #F49AF6;
+  border-radius: 50%;
+  background-color: #e5e7eb; /* bg-gray-200 */
+  transform: rotate(var(--angle)) translate(var(--radius)) rotate(calc(-1 * var(--angle)));
+}
+
+.taskCircle.favorite {
+  border-color: #facc15; /* yellow-500 */
+}
+
+.taskNumber {
+  position: absolute;
+  bottom: 96px; /* 24 * 4 (بدل bottom-24) */
+  background-color: #F49AF6;
+  color: white;
+  padding: 0 4px;
+  font-size: 0.875rem; /* text-sm */
+  border-radius: 9999px; /* rounded-full */
+}
+
+.taskInput {
+  width: 100%;
+  text-align: center;
+  background: transparent;
+  border: none;
+  resize: none;
+  overflow: hidden;
+}
+
+.taskInput:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+.taskActions {
+  display: flex;
+  gap: 8px; /* space-x-2 */
+  margin-top: 8px; /* mt-2 */
+}
+
+.favoriteButton {
+  position: absolute;
+  left: 70px;
+  font-size: 1.125rem; /* text-lg */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+.deleteButton {
+  position: absolute;
+  right: 70px;
+  color: #4b5563; /* gray-700 */
+  font-size: 1.125rem; /* text-lg */
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+
+/* Responsive Design */
+
+
+@media (max-width:476px){
+  .addButton {
+    width: 100px; 
+    height: 100px; 
+    
+  }
+  
+  .taskCircle {
+    width: 100px;
+    height: 100px;
+  }
+  .taskNumber {
+    position: absolute;
+    bottom: 85px; 
+  }
+  .favoriteButton {
+    position: absolute;
+    left: 70px;
+    top: 75px;
+    
+  }
+  
+  .deleteButton {
+    position: absolute;
+    right: 70px;
+    top: 75px;
+
+  }
+}
+
+@media (max-width:392px){
+  .taskInput{
+    font-size: 0.9rem;
+  }
+  .todoContainer {
+    --radius: 120px;
+    margin-top:-20px;
+  }
+
+  .addButton {
+    width: 90px; 
+    height: 90px; 
+    
+  }
+  
+  .taskCircle {
+    width: 90px;
+    height: 90px;
+  }
+  .taskNumber {
+    position: absolute;
+    bottom: 75px; 
+  }
+  .favoriteButton {
+    position: absolute;
+    left: 60px;
+    top: 67px;
+    
+  }
+  
+  .deleteButton {
+    position: absolute;
+    right: 60px;
+    top: 67px;
+
+  }
+}
+@media (max-width:334px){
+  .taskInput{
+    font-size: 0.8rem;
+  }
+  .todoContainer {
+    margin-top: -20px;
+    --radius: 100px;
+  }
+  .addButton {
+    width: 80px; 
+    height: 80px; 
+    
+  }
+  
+  .taskCircle {
+    width: 80px;
+    height: 80px;
+  }
+  .taskNumber {
+    position: absolute;
+    bottom: 67px; 
+  }
+  .favoriteButton {
+    position: absolute;
+    left: 50px;
+    top: 60px;
+    
+  }
+  
+  .deleteButton {
+    position: absolute;
+    right: 50px;
+    top: 60px;
+
+  }
+}
+
+
+

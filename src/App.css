@@ -1,0 +1,26 @@
+html{
+  overflow-x: hidden;
+}
+.bg-image {
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.bg-1 {
+  background-image: url('/src/assets/back1.jpg');
+}
+
+/* .bg-2 {
+  background-image: url('/src/assets/back2.jpg');
+} */
+
+.bg-3 {
+  background-image: url('/src/assets/back3.jpg');
+}
+
+.active{
+  text-decoration: underline;
+}  
+
+

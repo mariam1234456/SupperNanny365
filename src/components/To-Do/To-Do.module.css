@@ -1,0 +1,104 @@
+  .headerSection {
+    padding: 20px;
+  }
+  
+  .greeting {
+    padding-left: 200px;
+    margin: 0 auto;
+  }
+  
+  .iconsContainer {
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+
+
+  }
+ 
+  
+  .calendarPopup {
+    position: absolute;
+    top: 200px;
+    right: 100px;
+    background: white;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    z-index: 50;
+  }
+  
+  .taskPrompt {
+    max-width: 400px;
+    margin: 18px auto;
+  }
+  
+  /* Responsive Design */
+  @media (max-width: 724px) {
+    .greeting {
+     font-size: 1.4rem;
+      padding-left: 15px;
+
+    }
+  
+    .taskPrompt {
+      font-size: 1rem;
+      padding: 8px;
+      
+    }
+  
+    
+  } 
+  @media (max-width: 510px) {
+    .greeting {
+     font-size: 1.3rem;
+
+    }
+    .taskPrompt {
+      font-size: 1rem;
+      padding: 8px;
+      
+    }
+    .iconsContainer {
+        position: absolute;
+        cursor: pointer;
+        top: 85px;
+        right: 65px;
+        /* width: 12px;
+        height: 12px; */
+    
+      }
+  } 
+  @media (max-width: 410px) {
+    .greeting {
+     font-size: 1.2rem;
+      /* margin-left: 0;
+      margin-right: 0; */
+      /* padding-left: 15px; */
+
+    }
+    .taskPrompt {
+      font-size: 0.9rem;
+      padding: 8px;
+      
+    }
+    .iconsContainer {
+        position: absolute;
+        cursor: pointer;
+        top: 85px;
+        right: 30px;
+    
+    
+      }
+  } 
+  @media (max-width: 320px) {
+    .greeting {
+     font-size: 1.1rem;
+
+    }
+    .taskPrompt {
+      font-size: 0.8rem;
+      padding: 4px;
+      margin-top: 0px;
+      
+    }
+  } 
+  

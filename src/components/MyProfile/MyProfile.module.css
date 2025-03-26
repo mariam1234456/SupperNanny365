@@ -1,0 +1,389 @@
+.dropdown {
+    background: transparent;
+    border: none; 
+    color: #4b5563; 
+    padding: 5px;
+    font-size: 0.9rem;
+  }
+  
+  .dropdown:focus {
+    outline: none !important; 
+    box-shadow: none !important; 
+  }
+  
+  .dropdown:focus {
+    border: 1px solid #f6c5f7; 
+  }
+  .dropdown::-moz-focus-inner {
+    border: 0; 
+  }
+  
+  .dropdown:focus-visible {
+    outline: none !important; 
+  }
+
+.profileContainer {
+  width: 900px;
+  height: 490px;
+  margin: 64px auto;
+  border-radius: 12px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  background: #fa9af6; 
+}
+
+.headerSection {
+  width: 100%;
+  height: 160px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(to bottom, #f2f2f2, #fa9af6);
+  position: relative;
+  margin-bottom: 50px; 
+}
+
+.avatarWrapper {
+  position: relative;
+  width: 96px;
+  height: 96px;
+  margin-top: 40px;
+}
+
+.avatar {
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  border: 1px solid white;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.editButton {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  background: white;
+  padding: 4px;
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.userName {
+  font-size: 18px;
+  font-weight: 600;
+  color: #1f2937;
+  margin-top: 8px;
+}
+
+.userInfo {
+  font-size: 14px;
+  color: #4b5563;
+  margin: 4px 0;
+  line-height: 1;
+}
+
+.userInfo:last-child {
+  margin-bottom: 0;
+}
+
+.optionsSection {
+  background: #f49af6;
+  width: 100%;
+  flex: 1;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.optionsList {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+.optionGroup {
+  margin: 0 28px;
+  background: #f2f2f2;
+  border-radius: 8px;
+  padding: 0 36px;
+  margin-bottom: 4px;
+}
+
+.optionItem {
+  padding: 4px 0;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+.optionText {
+  color: #374151;
+}
+
+.optionLink {
+  color: #374151;
+  text-decoration: none;
+}
+
+.optionLink:hover {
+  text-decoration: underline;
+}
+
+.switch {
+  margin-left: auto;
+}
+ .dropdownWrapper {
+  margin-left: auto;
+  border: none;
+ 
+
+}
+
+
+.dropdown {
+  padding: 10px;
+  width: 100px; /* حجم مناسب */
+  text-align: left; /* الوضع الافتراضي */
+  direction: ltr; 
+}
+.rtl {
+  direction: rtl; /* يتحول لليمين عند اختيار العربية */
+  text-align: right;
+  padding-right: 40px; /* مسافة إضافية لمنع التداخل */
+}
+
+.dropdown:focus {
+  outline: none !important;
+  box-shadow: none !important;
+}
+
+/* Responsive Design */
+@media (max-width: 884px) {
+  .profileContainer {
+    width: 700px;
+    height: 428px;
+    margin: 50px auto;
+    border-radius: 9px;
+  }
+
+  .headerSection {
+    height: 124px;
+    margin-bottom: 31px; 
+  }
+
+  .avatarWrapper {
+    width: 74px;
+    height: 74px;
+    margin-top: 31px;
+  }
+
+  .avatar {
+    border: 0.77px solid white;
+  }
+
+  .editButton {
+    padding: 3px;
+  }
+
+  .userName {
+    font-size: 14px;
+    margin-top: 6px;
+  }
+
+  .userInfo {
+    font-size: 11px;
+    margin: 3px 0;
+  }
+
+  .optionGroup {
+    margin: 0 22px;
+    border-radius: 6px;
+    padding: 0 28px;
+    margin-bottom: 3px;
+  }
+
+  .optionItem {
+    padding: 3px 0;
+    gap: 12px;
+  }
+
+  .optionText,
+  .optionLink {
+    font-size: 12px;
+  }
+
+  .dropdown {
+    padding: 4px;
+    font-size: 12px;
+  }
+}
+
+@media (max-width: 702px) {
+  .profileContainer {
+    width: 550px;
+    height: 336px;
+    margin: 39px auto;
+    border-radius: 7px;
+  }
+
+  .headerSection {
+    height: 98px;
+    margin-bottom: 24px; 
+  }
+
+  .avatarWrapper {
+    width: 59px;
+    height: 59px;
+    margin-top: 24px;
+  }
+
+  .avatar {
+    border: 0.61px solid white;
+  }
+
+  .editButton {
+    padding: 1px 3px;
+  }
+.icons{
+  font-size: 0.8rem;
+}
+  .userName {
+    font-size: 11px;
+    margin-top: 5px;
+  }
+
+  .userInfo {
+    font-size: 9px;
+    margin: 2px 0;
+  }
+
+  .optionGroup {
+    margin: 0 17px;
+    border-radius: 5px;
+    padding: 0 22px;
+    margin-bottom: 2px;
+  }
+
+  .optionItem {
+    padding: 2px 0;
+    gap: 10px;
+  }
+
+  .optionText,
+  .optionLink {
+    font-size: 10px;
+  }
+
+  .dropdown {
+    padding: 3px;
+    font-size: 10px;
+  }
+}
+
+@media (max-width: 550px) {
+  .profileContainer {
+    width: 500px;
+    height: 300px;
+    margin: 28px auto;
+    border-radius: 5px;
+  }
+
+  .headerSection {
+    height: 71px;
+    margin-bottom: 18px; 
+  }
+
+  .avatarWrapper {
+    width: 42px;
+    height: 42px;
+    margin-top: 18px;
+  }
+
+  .avatar {
+    border: 0.44px solid white;
+  }
+
+  .editButton {
+    padding: 0px 2px;
+    position: absolute;
+    right: 2px;
+  }
+.icons{
+  font-size: 0.6rem;
+}
+  .userName {
+    font-size: 8px;
+    margin-top: 4px;
+  }
+
+  .userInfo {
+    font-size: 6px;
+    margin: 2px 0;
+  }
+
+  .optionGroup {
+    margin: 0 12px;
+    border-radius: 4px;
+    padding: 0 16px;
+    margin-bottom: 2px;
+  }
+
+  .optionItem {
+    padding: 2px 0;
+    gap: 7px;
+  }
+
+  .optionText,
+  .optionLink {
+    font-size: 7px;
+  }
+
+  .dropdown {
+    padding: 2px;
+    font-size: 7px;
+  }
+}
+@media (max-width: 500px) {
+  .profileContainer {
+    width: 400px;
+    height: 280px;
+    margin: 28px auto;
+    border-radius: 5px;
+  }
+
+  .editButton {
+    padding: 0px 3px;
+    position: absolute;
+    right: 2px;
+  }
+.icons{
+  font-size: 0.5rem;
+}
+}
+@media (max-width: 400px) {
+  .profileContainer {
+    width: 350px;
+    height: 300px;
+    margin: 28px auto;
+    border-radius: 5px;
+  }
+
+  .editButton {
+    padding: 0px 2px !important;
+    position: absolute;
+    right: 2px;
+  }
+.icons{
+  font-size: 0.5rem;
+}
+}
+@media (max-width: 350px) {
+  .profileContainer {
+    width: 300px;
+    height: 300px;
+    margin: 28px auto;
+    border-radius: 5px;
+  }
+
+}

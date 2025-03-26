@@ -1,0 +1,157 @@
+{
+    "navbar":{
+   "login":"LogIn",
+   "register":"Register",
+   "home":"Home",
+   "todo":"To Do-List",
+   "quicktips":"Quick Tips",
+   "howto":"How-To Guide",
+   "childtracker":"Child Tracker"
+},
+"home":{
+    "title":"Supporting You Every Step of the Way!",
+    "button":"Start your Journey!",
+    "header":"Start </strong> your parenting journey <strong>today </strong> with <strong>confidence!",
+    "Babysitting":"Babysitting",
+    "NannyCare":"Nanny Care",
+    "Mother’sHelpers":"Mother’s Helpers",
+    "servies1":" Provides a simple, trustworthy and extensive experience.",
+    "servies2":"A strategic, responsible and extensive childcare service.",
+    "servies3":"Provides simple, responsible, and effective ways.",
+    "title2": "Discover <strong>Essential Features</strong> To Support <br />Your Journey as a <strong>New Mother </strong>",
+    "header1":"Stay Organized with Our Comprehensive Daily To-Do List for New Moms.",
+    "header2":"Quick Tips for New Moms to Navigate Early Parenthood With Confidence.",
+    "header3":"Step-by-Step How-To-Guide for Every Aspect of Baby Care.",
+    "text1":"Our To-Do List helps you manage daily tasks effortlessly, ensuring you never miss a beat.",
+    "text2":"Get bite-sized that empowers you to make informed decisions for your baby.",
+    "text3":"From feeding to bathing, our guides ensure you feel confident and prepared.",
+    "button1":"Learn More",
+    "button2":"Explore",
+    "button3":"Get Started",
+    "PhotoGallery":"Photo Gallery",
+    "viewmore":"View More"
+      
+},
+"sidebar":{
+    "ToDoList":"To Do List",
+    "TaskDay":"Task Day",
+    "Importance":"Importance",
+    "MyProfile":" My Profile",
+    "Comunity":"Comunity",
+    "LogOut":"LogOut"
+},"footer":{
+    "PrivacyPolicy":"Privacy Policy",
+    "TermsofService":"Terms of Service",
+    "CookiesSettings":"Cookies Settings",
+    "foo":"© 2024 SuperHarry365. All rights reserved."
+},"login":{
+    "login":"LogIn",
+    "account":"Don't have an account?",
+    "signup":"SignUp",
+    "face":"Log in with Facebook",
+    "google":"Log in with Google",
+    "OR":"OR",
+    "email":"Your Email",
+    "pass":"Your Password",
+    "forget":"Forget Password"
+},"forget":{
+    "back":"Back to Login",
+    "forget":"Forget Your Password?",
+    "worry":"Don't worry, happens to all of us. Enter your email below to recover your password",
+    "submit":"Submit"
+},"verify":{
+    "verify":"Verify Code",
+    "code":"An authentication code has been sent to your email.",
+    "enter":"Enter Code",
+    "verifybutton":"Verify",
+    "receive":"Didn't receive a code?",
+    "resend":"Resend"
+},"resentpass":{
+    "set":"Set a Password",
+    "reset":"Your previous password has been reset. Please set a new password for your account.",
+    "create":"Create Password",
+    "reenter":"Re-enter Password",
+    "button":"Set Password"
+},"todo":{
+    "Hi":"Hi",
+    "Mom":"Mom in Supper Nanny!",
+    "Notifacitions":"Notifacitions",
+    "Replace":"Replace",
+    "get":"What Do You Need To Get Done Today?"
+},"import":{
+    "text":"There is no Favorite Task"
+},"quicktips":{
+    "text":"Simple and smart tips for a happier life!",
+    "advice":"Advice",
+    "read":"Read More"
+},"profile":{
+    "settings":"Settings",
+    "edit":"Edit profile information",
+    "baby":"Edit profile Baby information",
+    "Notifacitions":"Notifacitions",
+    "Language":"Language",
+    "help":"Help & Support",
+    "contact":"Contact US",
+    "Privacy":"Privacy Policy"
+},"editPro":{
+    "edit":"Edit Profile",
+    "Submit":"Submit"
+},"editBaby":{
+    "Activities":"Activities",
+    "Gallary":"Gallary"
+},"register":{
+    "create":"Create an account",
+    "login":"LogIn",
+    "account":"Already have an account?",
+    "first":"First Name",
+    "last":"Last Name",
+    "email":"Email Address",
+    "pass":"Password",
+    "confirm":"confirm your password",
+    "button":"Create an account",
+    "face":"Log in with Facebook",
+    "google":"Log in with Google"
+
+},"welcome":{
+    "welcome":"Welcome",
+    "text":"to your essential",
+    "text1":"resource for nurturing your",
+    "baby":"baby",
+    "choose":"Choose your child's gender and Date",
+    "gender":"What is your child's gender?",
+    "male":"Male",
+    "female":"Female",
+    "date":"What is your child's date of birth?",
+    "day":"Day",
+    "month":"Month",
+    "year":"Year",
+    "button":"Create an account"
+},"congrat":{
+    "step":"We are with",
+    "step1":"step by step",
+    "You":"you",
+    "button":"Continue"
+},"childtracker":{
+    "feeding":"Feeding",
+    "m":"mL",
+    "sleeping":"Sleeping",
+    "day":"day",
+    "diaper":"Diaper",
+    "h":"/24h",
+    "edit":"Edit",
+    "placholder":"Seaech....",
+    "thisweek":"this week",
+    "last week":"last week",
+    "last 2 week":"last 2 week",
+    "last 3 week":"last 3 week",
+    "last 4 week":"last 4 week",
+    "height":"Height:",
+    "cm":"cm",
+    "weight":"Weight:",
+    "kg":"kg",
+    "voccination":"Voccination:",
+    "temprature":"Temprature:",
+    "c": "°c"
+
+}
+}

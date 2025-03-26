@@ -1,0 +1,12 @@
+@media (max-width:320px){
+.editpro{
+    width: 300px;
+    height: 400px;
+    margin-top: 50px;
+}
+.edittext{
+    font-size: medium;
+    margin-top: -20px;
+    margin-bottom: 0px;
+}
+}

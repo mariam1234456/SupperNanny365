@@ -1,0 +1,405 @@
+
+.element {
+  opacity: 1;
+  transition: opacity 0.3 ease-in-out;
+}
+.element:hover {
+  opacity: 0.5;
+  cursor: pointer;
+}
+.hovercontainer {
+    position: relative;
+    display: inline-block;
+}
+
+.hovercontainer img {
+    width: 100%;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.hovertext {
+    position: absolute;
+    top: 90%; 
+    left: 40%;
+    transform: translate(-50%, -50%);
+    background: white;
+    color: black;
+    padding: 10px 10px;
+    border-radius: 25px;
+    margin: 15px;
+    font-size: 16px;
+    font-weight: bold;
+    transition: all 0.3s ease-in-out; 
+}
+
+.hovercontainer:hover .hovertext {
+    top: 50%; 
+}
+.card{
+    transition: transform 0.3s ease-in-out;
+}
+.card:nth-child(1) { transform: rotate(-20deg); } /* الكارت الأول يميل لليسار */
+.card:nth-child(2) { transform: rotate(0deg); }  /* الثاني ميلان بسيط */
+.card:nth-child(3) { transform: rotate(20deg); }  /* الثالث يميل لليمين */
+
+/* عند الـ hover ترجع مستقيمة */
+.card:hover {
+    transform: rotate(0deg);
+}
+.herocontainer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.heroimage img {
+  max-width: 500px;
+  width: 100%;
+}
+
+/* Hero Section */
+@media (max-width: 880px) {
+  .herocontainer {
+    flex-direction: row !important; /* يجبرهم يفضلوا جنب بعض */
+  }
+
+  .herotext {
+    font-size: 1.4rem;
+  }
+
+  .heroimage img {
+    max-width: 300px;
+  }
+  .herotext h1 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 820px) {
+  .herocontainer {
+    flex-direction: row !important; /* يجبرهم يفضلوا جنب بعض */
+  }
+
+  .herotext {
+    font-size: 1.3rem;
+  }
+
+  .heroimage img {
+    max-width: 300px;
+  }
+  .herotext h1 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 792px) {
+  .herocontainer {
+    flex-direction: row !important; /* يجبرهم يفضلوا جنب بعض */
+  }
+
+  .herotext {
+    font-size: 1.3rem;
+  }
+
+  .heroimage img {
+    max-width: 300px;
+  }
+  .herotext h1 {
+    font-size: 2.5rem;
+  }
+}
+@media (max-width: 776px) {
+  .herocontainer {
+    flex-direction: row !important; /* يجبرهم يفضلوا جنب بعض */
+  }
+
+  .herotext {
+    font-size: 1.2rem;
+    
+
+  }
+
+  .heroimage img {
+    max-width: 300px;
+  }
+  .herotext h1 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 662px) {
+  .herocontainer {
+    flex-direction: row !important; /* يجبرهم يفضلوا جنب بعض */
+    margin-top: 15px;
+  }
+
+  .herotext {
+    font-size: 1rem;
+    
+
+  }
+
+  .heroimage img {
+    max-width: 300px;
+  }
+  .herotext h1 {
+    font-size: 2rem;
+  }
+}
+@media (max-width: 642px) {
+  .herocontainer {
+    flex-direction: row !important; /* يجبرهم يفضلوا جنب بعض */
+  }
+
+  .herotext {
+    font-size: 1rem;
+  }
+
+  .heroimage img {
+    max-width: 300px;
+  }
+  .herotext h1 {
+    font-size: 1.9rem;
+  }
+}
+@media (max-width: 602px) {
+  .herocontainer {
+    flex-direction: row !important; /* يجبرهم يفضلوا جنب بعض */
+  }
+
+  .herotext {
+    font-size: 1rem;
+    
+
+  }
+
+  .heroimage img {
+    max-width: 300px;
+  }
+  .herotext h1 {
+    font-size: 1.8rem;
+  }
+}
+@media (max-width: 578px) {
+  .herocontainer {
+    flex-direction: row !important; /* يجبرهم يفضلوا جنب بعض */
+  }
+
+  .herotext {
+    font-size: 1rem;
+    
+
+  }
+
+  .heroimage img {
+    max-width: 300px;
+  }
+  .herotext h1 {
+        font-size: 1.6rem;
+  }
+}
+@media (max-width: 532px) {
+  .herocontainer {
+    flex-direction: row !important; /* يجبرهم يفضلوا جنب بعض */
+  }
+
+  .herotext {
+    font-size: 0.9rem;
+    
+
+  }
+
+  .heroimage img {
+    max-width: 300px;
+  }
+  .herotext h1 {
+    font-size: 1.4rem;
+  }
+}
+@media (max-width: 500px) {
+  .herocontainer {
+    flex-direction: row !important; /* يجبرهم يفضلوا جنب بعض */
+  }
+
+  .herotext {
+    font-size: 0.8rem;
+    
+
+  }
+
+  .heroimage img {
+    max-width: 300px;
+  }
+  .herotext h1 {
+    font-size: 1.3rem;
+  }
+}
+@media (max-width: 470px) {
+  .herocontainer {
+    flex-direction: row !important; /* يجبرهم يفضلوا جنب بعض */
+  }
+
+  .herotext {
+    font-size: 0.7rem;
+    
+
+  }
+
+  .heroimage img {
+    max-width: 300px;
+  }
+  .herotext h1 {
+    font-size: 1.2rem;
+  }
+}
+@media (max-width: 442px) {
+  .herocontainer {
+    flex-direction: row !important; /* يجبرهم يفضلوا جنب بعض */
+  }
+
+  .herotext {
+    font-size: 0.6rem;
+    
+
+  }
+
+  .heroimage img {
+    max-width: 300px;
+  }
+  .herotext h1 {
+    font-size: 1.1rem;
+  }
+}
+@media (max-width: 412px) {
+  .herocontainer {
+    flex-direction: row !important; /* يجبرهم يفضلوا جنب بعض */
+  }
+
+  .herotext {
+    font-size: 0.5rem;
+    
+
+  }
+
+  .heroimage img {
+    max-width: 300px;
+  }
+  .herotext h1 {
+    font-size: 1rem;
+  }
+}
+@media (max-width: 390px) {
+  .herocontainer {
+    flex-direction: row !important; /* يجبرهم يفضلوا جنب بعض */
+  }
+
+  .herotext {
+    font-size: 0.4rem;
+    
+
+  }
+
+  .heroimage img {
+    max-width: 300px;
+  }
+  .herotext h1 {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 364px) {
+  .herocontainer {
+    flex-direction: row !important; /* يجبرهم يفضلوا جنب بعض */
+  }
+
+  .herotext {
+    font-size: 0.4rem;
+    
+
+  }
+
+  .heroimage img {
+    max-width: 300px;
+  }
+  .herotext h1 {
+    font-size: 0.8rem;
+  }
+ 
+}
+@media (max-width: 350px) {
+  .herocontainer {
+    flex-direction: row !important; /* يجبرهم يفضلوا جنب بعض */
+  }
+
+  .herotext {
+    font-size: 0.3rem;
+  }
+
+  .heroimage img {
+    max-width: 300px;
+  }
+  .herotext h1 {
+    font-size: 0.8rem;
+  }
+ 
+}
+@media (max-width: 332px) {
+  .herocontainer {
+    flex-direction: row !important; /* يجبرهم يفضلوا جنب بعض */
+  }
+
+  .herotext {
+    font-size: 0.3rem;
+  }
+
+  .heroimage img {
+    max-width: 300px;
+  }
+  .herotext h1 {
+    font-size: 0.7rem;
+  }
+ 
+}
+@media (max-width: 322px) {
+  .herocontainer {
+    flex-direction: row !important; /* يجبرهم يفضلوا جنب بعض */
+  }
+
+  .herotext {
+    font-size: 0.2rem;
+  }
+
+  .heroimage img {
+    max-width: 300px;
+  }
+  .herotext h1 {
+    font-size: 0.7rem;
+  }
+  
+ 
+}
+
+.animate {
+  height: 350px;
+  width: 300px;
+  background: #f2bfbf;
+  animation: square 2s infinite alternate ease-in-out;
+}
+.animate:hover {
+  cursor: pointer;
+  animation-play-state: running;
+}
+@keyframes square {
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
+}
+@media (max-width: 766px) {
+  .animate {
+    height: 250px;
+  }
+}
+@media(max-width:334px){
+  .services h2{
+    font-size: smaller;
+  }
+}
