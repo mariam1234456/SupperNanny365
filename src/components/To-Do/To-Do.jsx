@@ -70,7 +70,7 @@ export default function ToDo() {
     <div className={`${style.todoContainer} bg-white h-screen`}>
       <>
         <div className={style.headerSection} style={{display:location.pathname==="/todo/profile"||location.pathname==="/todo/profile/edit"||location.pathname==="/todo/profile/baby"?"none":"block"}} >
-          <p className={`${style.greeting} text-[#f6c5f7] text-2xl mx-60`}>
+          <p className={`${style.greeting} text-[#f6c5f7] text-2xl mx-60 px-24`}>
             <span className="font-bold text-5xl">{t(`todo.Hi`)}&nbsp;</span>{t(`todo.Mom`)}
           </p>
           {/* Icons */}

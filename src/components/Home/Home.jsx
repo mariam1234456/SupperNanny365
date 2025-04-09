@@ -328,13 +328,13 @@ export default function Home() {
       ></div>
       <div className="relative flex flex-col items-center justify-center min-h-screen py-10 sm:py-16">
         <div className="z-20 max-w-2xl text-center px-4">
-          <h1 className="text-xl sm:text-2xl md:text-3xl font-semibold text-gray-800 leading-normal">
+          <h1 className="text-xl sm:text-2xl md:text-3xl text-gray-800">
             <p><Trans i18nKey="home.header" /></p>
           </h1>
           <img
             src={logo2}
             alt="Cute Kids"
-            className="w-32 sm:w-40 md:w-48 mx-auto mt-4 transform translate-x-16 sm:translate-x-20 md:translate-x-24"
+            className="w-32 pt-11 sm:w-40 md:w-48 mx-auto mt-4 transform translate-x-16 sm:translate-x-20 md:translate-x-24"
           />
         </div>
 

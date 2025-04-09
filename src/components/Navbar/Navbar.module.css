@@ -104,114 +104,109 @@
     
   }   */
 
+@media (max-width: 471px) {
+  .navbarbuttons {
+    padding: 10px 20px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 443px) {
+  .navbarbuttons {
+    padding: 9px 19px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 439px) {
+  .navbarbuttons {
+    padding: 8px 18px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 431px) {
+  .navbarbuttons {
+    padding: 6px 16px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 433px) {
+  .navbarbuttons {
+    padding: 5px 10px;
+    font-size: 12px;
+  }
+}
+@media (max-width: 403px) {
+  .navbarbuttons {
+    padding: 5px 6px;
+    font-size: 12px;
+  }
+  .liter {
+    font-size: small;
+  }
+}
+@media (max-width: 383px) {
+  .navbarbuttons {
+    padding: 5px 4px;
+    font-size: 12px;
+  }
+  .liter {
+    font-size: small;
+  }
+}
+@media (max-width: 379px) {
+  .navbarbuttons {
+    padding: 5px 4px;
+    font-size: 12px;
+  }
+  .liter {
+    font-size: smaller;
+  }
+}
+@media (max-width: 357px) {
+  .navbarbuttons {
+    padding: 5px 5px;
+    font-size: 11px;
+  }
+  .liter {
+    font-size: x-small;
+  }
+}
+@media (max-width: 350px) {
+  .navbarbuttons {
+    padding: 5px 4px;
+    font-size: 9px;
+  }
+  .liter {
+    font-size: x-small;
+  }
+}
 
+.navtoggle {
+  display: none;
+  z-index: 50; /* نتاكد إن الزر فوق أي عنصر تاني */
+}
 
+.navlinks {
+  display: none; /* الروابط مخفية افتراضيًا */
+}
 
-
-
-
-  @media (max-width: 471px) {
-    .navbarbuttons {
-      padding: 10px 20px;
-      font-size: 12px;
-    }
-  }
-  @media (max-width: 443px) {
-    .navbarbuttons {
-      padding: 9px 19px;
-      font-size: 12px;
-    }
-  }
-  @media (max-width: 439px) {
-    .navbarbuttons {
-      padding: 8px 18px;
-      font-size: 12px;
-    }
-  }
-  @media (max-width: 431px) {
-    .navbarbuttons {
-      padding: 6px 16px;
-      font-size: 12px;
-    }
-  }
-  @media (max-width: 433px) {
-    .navbarbuttons {
-      padding: 5px 10px;
-      font-size: 12px;
-    }
-  }
-  @media (max-width: 403px) {
-    .navbarbuttons {
-      padding: 5px 6px;
-      font-size: 12px;
-    }
-    .liter {
-      font-size: small;
-    }
-  }
-  @media (max-width: 383px) {
-    .navbarbuttons {
-      padding: 5px 4px;
-      font-size: 12px;
-    }
-    .liter {
-      font-size: small;
-    }
-  }
-  @media (max-width: 379px) {
-    .navbarbuttons {
-      padding: 5px 4px;
-      font-size: 12px;
-    }
-    .liter {
-      font-size: smaller;
-    }
-  }
-  @media (max-width: 357px) {
-    .navbarbuttons {
-      padding: 5px 5px;
-      font-size: 11px;
-    }
-    .liter {
-      font-size: x-small;
-    }
-  }
-  @media (max-width: 350px) {
-    .navbarbuttons {
-      padding: 5px 4px;
-      font-size: 9px;
-    }
-    .liter {
-      font-size: x-small;
-    }
-  }
-  
+@media (max-width: 836px) {
   .navtoggle {
-    display: none;
-    z-index: 50; /* نتاكد إن الزر فوق أي عنصر تاني */
+    display: block !important; /* زر الـ Toggle يظهر في الشاشات الصغيرة */
   }
-  
   .navlinks {
-    display: none; /* الروابط مخفية افتراضيًا */
+    display: none; /* الروابط مخفية في الشاشات الصغيرة */
   }
-  
-  @media (max-width: 836px) {
-    .navtoggle {
-      display: block !important; /* زر الـ Toggle يظهر في الشاشات الصغيرة */
-    }
-    .navlinks {
-      display: none; /* الروابط مخفية في الشاشات الصغيرة */
-    }
-    .navlinks.open { /* لما تضغطي على زر الـ Toggle */
-      display: block;
-    }
+  .navlinks.open {
+    /* لما تضغطي على زر الـ Toggle */
+    display: block;
   }
-  
-  @media (min-width: 836px) {
-    .navtoggle {
-      display: none; /* زر الـ Toggle يختفي في الشاشات الكبيرة */
-    }
-    .navlinks {
-      display: block !important; /* الروابط تظهر دايمًا في الشاشات الكبيرة */
-    }
+}
+
+@media (min-width: 836px) {
+  .navtoggle {
+    display: none; /* زر الـ Toggle يختفي في الشاشات الكبيرة */
   }
+  .navlinks {
+    display: block !important; /* الروابط تظهر دايمًا في الشاشات الكبيرة */
+  }
+}
