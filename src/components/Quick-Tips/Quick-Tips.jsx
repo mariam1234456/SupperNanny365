@@ -1,5 +1,5 @@
 import style from "../../components/Quick-Tips/Quick-Tips.module.css";
-import React, { useState, useEffect } from "react";
+import { useState, useEffect } from "react";
 import bottle1 from "../../assets/bottle1.png";
 import Group from "../../assets/Group.png";
 import Woman from "../../assets/Woman.png";
