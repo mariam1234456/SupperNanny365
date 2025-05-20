@@ -4,6 +4,7 @@ import imog from "../../assets/emogi.png";
 import Maracas from "../../assets/Maracas.png";
 import Medium from "../../assets/MediumIcons.png";
 import { useTranslation } from "react-i18next";
+import { useGender } from "../../Context/GenderContext";
 export default function EditProfileBaby() {
   const [showGallary, setShowGallary] = useState(false);
   const [tasks, setTasks] = useState([]);
@@ -30,6 +31,7 @@ export default function EditProfileBaby() {
   const removeTask = (index) => {
     setTasks(tasks.filter((_, i) => i !== index));
   };
+  const {gender}=useGender();
 
   return (
     <>
@@ -72,7 +74,13 @@ export default function EditProfileBaby() {
   
 
             {isOpen && (
-              <div className=" z-50 absolute mt-40 w-64 bg-[#edc9ee] shadow-md p-4 rounded-lg">
+              <div className={`z-50 absolute mt-40 w-64  ${
+        gender === "male"
+          ? "bg-[#bdddf5]"
+          : gender === "female"
+          ? "bg-[#edc9ee]"
+          : "bg-gray-300"
+      } shadow-md p-4 rounded-lg`}>
                 <div className="flex gap-2">
                   <input
                     type="text"

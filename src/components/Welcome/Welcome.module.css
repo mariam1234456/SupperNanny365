@@ -1,2 +1,4 @@
-.Welcome {
+button[disabled]
+{
+    background-color: #eea3a3; 
 }

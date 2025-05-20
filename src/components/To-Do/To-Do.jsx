@@ -14,6 +14,7 @@ import EditProfileBaby from "../EditProfileBaby/EditProfileBaby";
 import QuickTips from "../Quick-Tips/Quick-Tips";
 import HowTo from "../How-To/How-To";
 import { useTranslation } from "react-i18next";
+import { useGender } from "../../Context/GenderContext";
 export default function ToDo() {
   const {t}=useTranslation();
   const [isSidebaropen,setIssidebaropen]=useState(true);
@@ -65,16 +66,23 @@ export default function ToDo() {
     });
   };
   const location = useLocation();
+  const { gender } = useGender();
 
   return (
     <div className={`${style.todoContainer} bg-white h-screen`}>
       <>
         <div className={style.headerSection} style={{display:location.pathname==="/todo/profile"||location.pathname==="/todo/profile/edit"||location.pathname==="/todo/profile/baby"?"none":"block"}} >
-          <p className={`${style.greeting} text-[#f6c5f7] text-2xl mx-60 px-24`}>
+          <p className={`${style.greeting}  ${
+        gender === "male"
+          ? "text-[#c5e1f6]"
+          : gender === "female"
+          ? "text-[#f6c5f7]"
+          : "text-gray-300"
+      }  text-2xl mx-60 px-24`}>
             <span className="font-bold text-5xl">{t(`todo.Hi`)}&nbsp;</span>{t(`todo.Mom`)}
           </p>
           {/* Icons */}
-          <div className={`${style.iconsContainer} gap-4 flex justify-end mx-16`}>
+          {/* <div className={`${style.iconsContainer} gap-4 flex justify-end mx-16`}>
             <img
               src={calendar}
               alt=""
@@ -113,7 +121,7 @@ export default function ToDo() {
               {t(`todo.Replace`)}
               <div className="tooltip-arrow" data-popper-arrow></div>
             </div>
-          </div>
+          </div> */}
 
           {showCalender && (
             <div className={style.calendarPopup}>
@@ -125,7 +133,13 @@ export default function ToDo() {
             </div>
           )}
           <div className="flex item-center justify-center">
-            <p className={`${style.taskPrompt} text-lg bg-[#f6c5f7] text-center mt-4 text-white rounded-full my-10 p-2`}>
+            <p className={`${style.taskPrompt} text-lg ${
+        gender === "male"
+          ? "bg-[#c5e1f6]"
+          : gender === "female"
+          ? "bg-[#f6c5f7]"
+          : "bg-gray-300"
+      } text-center mt-4 text-white rounded-full my-10 p-2`}>
             {t(`todo.get`)}
             </p>
           </div>

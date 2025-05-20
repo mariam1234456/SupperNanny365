@@ -2,13 +2,21 @@ import { Link, NavLink, useNavigate } from "react-router-dom";
 import style from "./EditProfile.module.css";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { useGender } from "../../Context/GenderContext";
 
 export default function EditProfile() {
   const navigate=useNavigate();
   const {t}= useTranslation();
+  const {gender}=useGender();
   return (
     <>
-      <div className={`absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 bg-[#F49AF6] p-8 rounded-lg shadow-lg w-96 ${style.editpro}`}>
+      <div className={`absolute left-1/2 top-1/2 transform -translate-x-1/2 -translate-y-1/2 ${
+        gender === "male"
+          ? "bg-[#c5e1f6]"
+          : gender === "female"
+          ? "bg-[#f6c5f7]"
+          : "bg-gray-300"
+      }  p-8 rounded-lg shadow-lg w-96 ${style.editpro}`}>
         <h3 className={`text-center text-[#1E1E1E] text-2xl mb-5 ${style.edittext}`}>{t(`editPro.edit`)}</h3>
         <div className="space-y-3"> 
           <input

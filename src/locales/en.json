@@ -119,9 +119,10 @@
     "baby":"baby",
     "choose":"Choose your child's gender and Date",
     "gender":"What is your child's gender?",
-    "male":"Male",
-    "female":"Female",
+    "male":"male",
+    "female":"female",
     "date":"What is your child's date of birth?",
+    "date1":"2022-02-04",
     "day":"Day",
     "month":"Month",
     "year":"Year",
@@ -153,5 +154,25 @@
     "temprature":"Temprature:",
     "c": "°c"
 
-}
+},"form":{
+    "required":"Required",
+    "too_short": "Too Short",
+    "too_long": "Too Long",
+    "invalid":"Invalid Email",
+    "match":"Not Match",
+    "pass":"Please enter a strong pass with at least 8 chars, including a capital letter, a small letter, a number, and a special symbol.",
+    "date3":"data is in future"
+
+},"translation": {
+    "AddTask": "Add Task",
+    "EditTask": "Edit Task",
+    "content": "Enter task content",
+    "Save": "Save",
+    "Cancel": "Cancel",
+    "Add": "Add"
+  },
+  "quicktips1": {
+    "loading": "Translating..."
+  }
+  
 }

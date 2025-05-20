@@ -101,6 +101,7 @@ import imog from "../../assets/emogi.png";
 import { Link, useNavigate } from "react-router-dom";
 import i18n from "../../i18n";
 import { useTranslation } from "react-i18next";
+import { useGender } from "../../Context/GenderContext";
 
 export default function MyProfile({ isSidebaropen }) {
   const { i18n } = useTranslation();
@@ -124,10 +125,25 @@ export default function MyProfile({ isSidebaropen }) {
 
   const navigate = useNavigate();
   const { t } = useTranslation();
+    const { gender } = useGender();
+    const getBackgroundColor = () => {
+      if (gender === "female") return "#fa9af6"; 
+      if (gender === "male") return "#c5e1f6";   
+      return "#F49AF6"; 
+    };
 
+    const getGradient = () => {
+      if (gender === "female") {
+        return "linear-gradient(to bottom, #f2f2f2, #fa9af6)"; // pink
+      }
+      if (gender === "male") {
+        return "linear-gradient(to bottom, #f2f2f2, #c5e1f6)"; // blue
+      }
+      return "linear-gradient(to bottom, #f2f2f2, #fa9af6)"; // default
+    };
   return (
-    <div className={style.profileContainer}>
-      <div className={style.headerSection}>
+    <div className={style.profileContainer} style={{background:getBackgroundColor()}}>
+      <div className={style.headerSection} style={{background:getGradient()}}>
         <div className={style.avatarWrapper}>
           <img src={imog} alt="Avatar" className={style.avatar} />
           <button
@@ -142,7 +158,7 @@ export default function MyProfile({ isSidebaropen }) {
         <p className={style.userInfo}>+01 234 567 89</p>
       </div>
 
-      <div className={style.optionsSection}>
+      <div className={style.optionsSection} style={{background:getBackgroundColor()}}>
         <ul className={style.optionsList}>
           <div className={style.optionGroup}>
             <li className={style.optionItem}>

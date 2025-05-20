@@ -1,1 +1,4 @@
-.Register {}
+button[disabled]
+{
+    background-color:  aqua !important;
+}

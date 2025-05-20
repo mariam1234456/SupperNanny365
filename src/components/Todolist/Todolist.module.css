@@ -10,22 +10,6 @@
   --radius: 140px;
 }
 
-.addButton {
-  position: absolute;
-  width: 112px; /* 28 * 4 (بدل w-28) */
-  height: 112px; /* 28 * 4 (بدل h-28) */
-  background-color: #F49AF6;
-  border-radius: 50%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  color: white;
-  font-size: 2.25rem; /* 36px (بدل text-4xl) */
-  font-weight: bold;
-  border: none;
-  cursor: pointer;
-}
-
 .taskCircle {
   position: absolute;
   width: 112px;
@@ -35,7 +19,8 @@
   justify-content: center;
   align-items: center;
   padding: 8px;
-  border: 2px solid #F49AF6;
+  border: 2px solid;
+  
   border-radius: 50%;
   background-color: #e5e7eb; /* bg-gray-200 */
   transform: rotate(var(--angle)) translate(var(--radius)) rotate(calc(-1 * var(--angle)));
@@ -48,7 +33,6 @@
 .taskNumber {
   position: absolute;
   bottom: 96px; /* 24 * 4 (بدل bottom-24) */
-  background-color: #F49AF6;
   color: white;
   padding: 0 4px;
   font-size: 0.875rem; /* text-sm */
@@ -202,3 +186,70 @@
 
 
 
+.modalOverlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5); /* خلفية شفافة */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 12px;
+  width: 50%;
+  max-width: 300px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+  text-align: center;
+}
+
+.modal h2 {
+  margin-bottom: 1rem;
+  font-size: 1.5rem;
+  color: #333;
+}
+
+.modal textarea {
+  width: 100%;
+  min-height: 70px;
+  padding: 0.75rem;
+  border-radius: 8px;
+  border: 1px solid #ccc;
+  margin-bottom: 1rem;
+  font-size: 1rem;
+  resize: vertical;
+}
+
+.modalButtons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.saveButton {
+  flex: 1;
+  background-color: #ad48ad;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.cancelButton {
+  flex: 1;
+  background-color: #f44336;
+  color: white;
+  padding: 0.75rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+}

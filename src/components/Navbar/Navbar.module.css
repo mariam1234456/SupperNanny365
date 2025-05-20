@@ -1,3 +1,23 @@
+/* .dropdownWrapper {
+  margin-left: auto;
+  border: none;
+ 
+
+}
+
+
+.dropdown {
+  padding: 10px;
+  width: 100px; 
+  text-align: left; 
+  direction: ltr; 
+}
+.rtl {
+  direction: rtl; 
+  text-align: right;
+  padding-right: 40px; 
+} */
+
 @media (max-width: 471px) {
   .navbarbuttons {
     padding: 10px 20px;

@@ -31,7 +31,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: flex-start;
-  background: #fa9af6; 
 }
 
 .headerSection {
@@ -41,7 +40,6 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(to bottom, #f2f2f2, #fa9af6);
   position: relative;
   margin-bottom: 50px; 
 }

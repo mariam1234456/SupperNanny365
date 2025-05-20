@@ -18,7 +18,9 @@ import EditProfile from './components/EditProfile/EditProfile'
 import EditProfileBaby from './components/EditProfileBaby/EditProfileBaby'
 import './i18n';
 import { useTranslation } from 'react-i18next'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
+import ProtectedRoutes from './components/protectedRoutes/protectedRoutes'
+import ProtectedAuth from './components/protectedAuth/protectedAuth'
 
 function App() {
   const { i18n } = useTranslation();
@@ -29,29 +31,29 @@ function App() {
     document.documentElement.lang = i18n.language;
     document.documentElement.dir = savedLanguage === "ar" ? "rtl" : "ltr";
   }, []);
-
+  
   let routes=createBrowserRouter([{
-     path:"",element:<Layout/>,children:[
+     path:"",element:<Layout />,children:[
       {index:true,element:<Home/>},
-      {path:"todo",element:<ToDo/>,children:[
-        {path:"import",element:<Importance/>},
-        {path:"profile",element:<MyProfile/>,children:[
-          {path:"edit",element:<EditProfile/>},
-          {path:"baby",element:<EditProfileBaby/>},
+      {path:"todo",element:<ProtectedRoutes><ToDo/></ProtectedRoutes>,children:[
+        {path:"import",element:<ProtectedRoutes><Importance/></ProtectedRoutes>},
+        {path:"profile",element:<ProtectedRoutes><MyProfile/></ProtectedRoutes>,children:[
+          {path:"edit",element:<ProtectedRoutes><EditProfile/></ProtectedRoutes>},
+          {path:"baby",element:<ProtectedRoutes><EditProfileBaby/></ProtectedRoutes>},
         ]},
      ]},
-      {path:"quicktips",element:<QuickTips/>},
-      {path:"howto",element:<HowTo/>},
-      {path:"childtracker",element:<ChildTracker/>},
-      {path:"list",element:<Todolist/>},
+      {path:"quicktips",element:<ProtectedRoutes><QuickTips/></ProtectedRoutes>},
+      {path:"/howto/" ,element:<ProtectedRoutes><HowTo/></ProtectedRoutes>},
+      {path:"childtracker",element:<ProtectedRoutes><ChildTracker/></ProtectedRoutes>},
+      {path:"list",element:<ProtectedRoutes><Todolist/></ProtectedRoutes>},
      ],
   },
   {
     path:"",element:<LayoutWithOutNav/>,children:[
-      {path:"login",element:<LogIn/>},
-      {path:"register",element:<Register/>},
-      {path:"welcome",element:<Welcome/>},
-      {path:"congrate",element:<Congrat/>},
+      {path:"login",element:<ProtectedAuth><LogIn/></ProtectedAuth>},
+      {path:"register",element:<ProtectedAuth><Register/></ProtectedAuth>},
+      {path:"welcome",element:<ProtectedRoutes><Welcome/></ProtectedRoutes>},
+      {path:"congrate",element:<ProtectedRoutes><Congrat/></ProtectedRoutes>},
       
 
      ],

@@ -2,10 +2,13 @@ import { useNavigate } from "react-router-dom";
 import React from "react";
 import bride from "../../assets/bride.mp4";
 import { useTranslation } from "react-i18next";
+import { useGender } from "../../Context/GenderContext";
 
 export default function Congrat() {
   const navigate = useNavigate();
   const { t } = useTranslation();
+  const {gender}=useGender()
+  console.log(gender)
 
   return (
     <>
