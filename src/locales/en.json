@@ -73,11 +73,11 @@
     "reenter":"Re-enter Password",
     "button":"Set Password"
 },"todo":{
-    "Hi":"Hi",
-    "Mom":"Mom in Supper Nanny!",
+    "Hi":"Welcome",
+    "Mom":"Supper Nanny!",
     "Notifacitions":"Notifacitions",
     "Replace":"Replace",
-    "get":"What Do You Need To Get Done Today?"
+    "get":"What's on your memory list today ?"
 },"import":{
     "text":"There is no Favorite Task"
 },"quicktips":{
@@ -113,12 +113,14 @@
     "google":"Log in with Google"
 
 },"welcome":{
-    "welcome":"Welcome",
-    "text":"to your essential",
-    "text1":" resource for nurturing your ",
-    "baby":"baby",
-    "choose":"Choose your child's gender and Date",
+    "welcome":"Let's",
+    "text":" take care of your baby",
+    "text1":" ",
+    "baby":"together",
+    "choose":"Select your child's Name ,gender and Date",
     "gender":"What is your child's gender?",
+    "name":"What is your child's name?",
+    "place":"Enter Name",
     "male":"male",
     "female":"female",
     "date":"What is your child's date of birth?",
@@ -126,9 +128,13 @@
     "day":"Day",
     "month":"Month",
     "year":"Year",
-    "button":"Create an account"
+    "button":"Create an account",
+    "succes":"Data is saved",
+    "error":"Failed in saved data",
+    "success":"Data is edited successfully",
+    "error1":"Failed in edited data"
 },"congrat":{
-    "step":"We are with",
+    "step":"with",
     "step1":"step by step",
     "You":"you",
     "button":"Continue"
@@ -152,7 +158,7 @@
     "kg":"kg",
     "voccination":"Voccination:",
     "temprature":"Temprature:",
-    "c": "°c"
+    "c": "°c","sendGrowth": "Send","ActivityGrowth":"Activity Growth"
 
 },"form":{
     "required":"Required",

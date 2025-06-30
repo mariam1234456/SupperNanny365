@@ -58,21 +58,26 @@ export default function Navbar() {
     const pink = "#f6c5f7";
     const blue = "#c5e1f6";
   
-    const pinkPages = [
-      "/todo",
-      "/quicktips",
-      "/howto",
-      "/childtracker",
-      "/todo/import",
-      "/todo/profile",
-      "/todo/profile/edit",
-      "/todo/profile/baby",
-    ];
-  
-    if (pinkPages.includes(location.pathname)) {
-      if (gender === "female") return pink;
-      if (gender === "male") return blue;
-    }
+   const pinkPages = [
+  "/todo",
+  "/quicktips",
+  "/childtracker",
+  "/howto",
+  "/todo/import",
+  "/todo/profile",
+  "/todo/profile/edit",
+  "/todo/profile/baby",
+];
+
+// تحقق إذا كان الـ path هو واحد من الصفحات، أو يبدأ بـ /howto/
+const isPinkPage =
+  pinkPages.includes(location.pathname) || location.pathname.startsWith("/howto/");
+
+if (isPinkPage) {
+  if (gender === "female") return pink;
+  if (gender === "male") return blue;
+}
+
   
     return "#FFFFFF"; // الصفحات التانية
   };
@@ -228,7 +233,6 @@ export default function Navbar() {
 
         <div className="relative inline-block">
         <select
-          // onChange={(e) => i18n.changeLanguage(e.target.value)}
           onChange={(e) => changeLanguage(e.target.value)}
 
           value={i18n.language}

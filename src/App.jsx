@@ -43,7 +43,9 @@ function App() {
         ]},
      ]},
       {path:"quicktips",element:<ProtectedRoutes><QuickTips/></ProtectedRoutes>},
-      {path:"/howto/" ,element:<ProtectedRoutes><HowTo/></ProtectedRoutes>},
+      {path:"/howto/:category" ,element:<ProtectedRoutes><HowTo/></ProtectedRoutes>},
+            {path:"/howto" ,element:<ProtectedRoutes><HowTo/></ProtectedRoutes>},
+
       {path:"childtracker",element:<ProtectedRoutes><ChildTracker/></ProtectedRoutes>},
       {path:"list",element:<ProtectedRoutes><Todolist/></ProtectedRoutes>},
      ],

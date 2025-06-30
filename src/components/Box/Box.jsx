@@ -348,6 +348,7 @@ function handelLogout(){
 localStorage.removeItem("accessToken");
 localStorage.removeItem("refreshToken");
 localStorage.removeItem("babyId");
+localStorage.removeItem("childId");
 localStorage.removeItem("motherId");
 localStorage.removeItem("baby");
 localStorage.removeItem("gender");
