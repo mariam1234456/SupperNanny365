@@ -2,7 +2,7 @@ import style from "../../components/Quick-Tips/Quick-Tips.module.css";
 import { useState, useEffect } from "react";
 import bottle1 from "../../assets/bottle1.png";
 import Group from "../../assets/Group.png";
-import Woman from "../../assets/Woman.png";
+import woman from "../../assets/woman.png";
 import bed from "../../assets/bed.png";
 import Sleeping from "../../assets/Sleeping.png";
 import life from "../../assets/life.png";
@@ -28,7 +28,7 @@ const tips = [
   {
     id: 3,
     api: "https://marwabakry23.pythonanywhere.com/api/advice/mother/",
-    icon: Woman,
+    icon: woman,
     category: "mother",
   },
   {

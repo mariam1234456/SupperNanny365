@@ -172,7 +172,7 @@ import React, { useEffect, useState } from "react";
 import { useParams, useSearchParams } from "react-router-dom";
 import axios from "axios";
 import { useTranslation } from "react-i18next";
-import Woman from "../../assets/Woman.png";
+import woman from "../../assets/woman.png";
 import Sleeping from "../../assets/Sleeping.png";
 import life from "../../assets/life.png";
 import bottle1 from "../../assets/bottle1.png";
@@ -182,7 +182,7 @@ import style from "./How-To.module.css";
 
 
 const categoryIcons = {
-  mother: Woman,
+  mother: woman,
   baby: Sleeping,
   moon: life,
   bottle: bottle1,
