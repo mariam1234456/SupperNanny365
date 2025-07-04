@@ -157,7 +157,7 @@ export default function Home() {
         </p>
 
         <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-2 mt-10 sm:mt-20 md:mt-32 px-4">
-          {/* ✅ الكارت الأولى */}
+          {/*  الكارت الأولى */}
           <div
             className={`w-full max-w-[250px] min-h-[500px] p-6 mx-auto bg-white rounded-xl shadow-2xl flex flex-col 
         ${styles.element} ${styles.hovercontainer} ${styles.card}`}
@@ -181,7 +181,7 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* ✅ الكارت الثانية */}
+          {/*  الكارت الثانية */}
           <div
             className={`w-full max-w-[250px] min-h-[500px] p-6 mx-auto bg-white rounded-lg shadow-2xl flex flex-col 
         ${styles.element} ${styles.hovercontainer} ${styles.card}`}
@@ -205,7 +205,7 @@ export default function Home() {
             </Link>
           </div>
 
-          {/* ✅ الكارت الثالثة */}
+          {/*  الكارت الثالثة */}
           <div
             className={`w-full max-w-[250px] min-h-[500px] p-6 mx-auto bg-white rounded-lg shadow-2xl flex flex-col 
         ${styles.element} ${styles.hovercontainer} ${styles.card}`}

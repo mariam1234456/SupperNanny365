@@ -132,7 +132,10 @@
     "succes":"Data is saved",
     "error":"Failed in saved data",
     "success":"Data is edited successfully",
-    "error1":"Failed in edited data"
+    "error1":"Failed in edited data",
+    "succes1":"The child signed successfully",
+    "success2":"A Notifacition will be sent to your email with the upcoming vaccination dates",
+    "hi":"hi"
 },"congrat":{
     "step":"with",
     "step1":"step by step",
@@ -158,7 +161,11 @@
     "kg":"kg",
     "voccination":"Voccination:",
     "temprature":"Temprature:",
-    "c": "°c","sendGrowth": "Send","ActivityGrowth":"Activity Growth"
+    "c": "°c","sendGrowth": "Send","ActivityGrowth":"Activity Growth","growthStatus": "Growth Status",
+  "weightStatus": "Weight Status",
+  "heightStatus": "Height Status",
+"close": "Close"
+
 
 },"form":{
     "required":"Required",
