@@ -13,12 +13,17 @@ import axios from "axios";
 import i18n from "../../i18n";
 import { TokenContext } from "../../Context/TokenContext";
 import { useGender } from "../../Context/GenderContext";
+import toast from "react-hot-toast";
 
 export default function LogIn() {
   const [message, setmessage] = useState(null);
+  const [code, setCode] = useState("");
+
   const [messageerr, setmessageerr] = useState(null);
   const [messageerr1, setmessageerr1] = useState(null);
   const [motherId,setmotherId]=useState(null);
+  const [userId, setUserId] = useState(null);
+
   const [isLoading, setisLoading] = useState(false);
   const { t } = useTranslation();
   const [password, setPassword] = useState("");
@@ -113,15 +118,52 @@ let {token ,setToken}=useContext(TokenContext)
       .then((data) => {
         console.log(data)
           setShowForgotPassword(false);
+ setUserId(data.data.user_id);
           setShowVerifyCode(true);
         setisLoading(false);
+     console.log(data.data.message)
+     toast(data.data.message)
       })
       .catch((err) => {
        console.log(err.response.data.error)
+
        setmessageerr1(err.response.data.error)
         setisLoading(false);
       });
   }
+async function resetPassword() {
+  setisLoading(true);
+
+  try {
+    const res = await axios.post("https://marwabakry23.pythonanywhere.com/api/reset_password/", {
+      user_id: userId,
+      code: code,
+      new_password: password,
+    });
+
+    toast.success(res.data.message);
+
+    // ✅ خفي كل المودالات
+    setShowSetPassword(false);
+    setShowVerifyCode(false);
+    setShowForgotPassword(false);
+    setIsOpen(true);
+
+    setCode("");
+    setPassword("");
+    setmessageerr1(null);
+
+  } catch (err) {
+    const errorMsg = err.response?.data?.error || "حدث خطأ ما";
+    toast.error(errorMsg);
+    setmessageerr1(errorMsg);
+  } finally {
+    setisLoading(false);
+  }
+}
+
+
+
 
   return (
     <>
@@ -179,53 +221,60 @@ let {token ,setToken}=useContext(TokenContext)
                 </div>
                 
                 <button
-                  className="w-full bg-red-500 text-white py-2 mt-4 rounded-full text-sm md:text-base"
-                  onClick={() => setShowSetPassword(false)}
-                >
-                  {t(`resentpass.button`)}
-                </button>
+  className="w-full bg-red-500 text-white py-2 mt-4 rounded-full text-sm md:text-base"
+  onClick={resetPassword}
+>
+  {t(`resentpass.button`)}
+</button>
+
               </div>
             ) : showVerifyCode ? (
               <div>
-                <button
-                  onClick={() => setShowVerifyCode(false)}
-                  className="absolute top-3 left-3 text-gray-500 hover:text-gray-800 text-sm md:text-base"
-                >
-                  ← {t(`forget.back`)}
-                </button>
-                <button
-                  onClick={() => navigate("/")}
-                  className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
-                >
-                  <i className="fas fa-times"></i>
-                </button>
-                <h2 className="text-lg md:text-xl font-semibold my-4">
-                  {t(`verify.verify`)}
-                </h2>
-                <p className="text-xs md:text-sm text-gray-500 mt-2">
-                  {t(`verify.code`)}
-                </p>
-                <input
-                  type="text"
-                  placeholder={t(`verify.enter`)}
-                  className="w-full p-2 border-gray-300 rounded-lg mt-4 text-sm md:text-base"
-                />
-                <button
-                  className="w-full bg-red-500 text-white py-2 mt-4 rounded-full text-sm md:text-base"
-                  onClick={() => {
-                    setShowVerifyCode(false);
-                    setShowSetPassword(true);
-                  }}
-                >
-                  {t(`verify.verifybutton`)}
-                </button>
-                {/* <p className="text-xs md:text-sm text-black text-center mt-2 cursor-pointer">
-                  {t(`verify.receive`)}{" "}
-                  <span className="underline text-red-500">
-                    {t(`verify.resend`)}
-                  </span>
-                </p> */}
-              </div>
+    <button
+      onClick={() => setShowVerifyCode(false)}
+      className="absolute top-3 left-3 text-gray-500 hover:text-gray-800 text-sm md:text-base"
+    >
+      ← {t(`forget.back`)}
+    </button>
+    <button
+      onClick={() => navigate("/")}
+      className="absolute top-3 right-3 text-gray-500 hover:text-gray-800"
+    >
+      <i className="fas fa-times"></i>
+    </button>
+    <h2 className="text-lg md:text-xl font-semibold my-4">
+      {t(`verify.verify`)}
+    </h2>
+    <p className="text-xs md:text-sm text-gray-500 mt-2">
+      {t(`verify.code`)}
+    </p>
+
+    {/* هنا بيتم إدخال الكود */}
+    <input
+      type="text"
+      placeholder={t(`verify.enter`)}
+      value={code}
+      onChange={(e) => setCode(e.target.value)}
+      className="w-full p-2 border-gray-300 rounded-lg mt-4 text-sm md:text-base"
+    />
+
+    <input
+      type="password"
+      placeholder={t(`resentpass.create`)}
+      value={password}
+      onChange={(e) => setPassword(e.target.value)}
+      className="w-full p-2 mt-3 border-gray-300 rounded-lg text-sm md:text-base"
+    />
+
+   <button
+  className="w-full bg-red-500 text-white py-2 mt-4 rounded-full text-sm md:text-base"
+  onClick={resetPassword}
+  disabled={isLoading}
+>
+  {isLoading ? <i className="fas fa-spinner fa-spin"></i> : t(`verify.verifybutton`)}
+</button>
+
+  </div>
             ) : showForgotPassword ? (
               <div>
                 <button
@@ -406,3 +455,4 @@ let {token ,setToken}=useContext(TokenContext)
     </>
   );
 }
+
