@@ -74,8 +74,8 @@ let {token ,setToken}=useContext(TokenContext)
         )
         setgender(data.data.child.gender)
         setid(data.data.child.id)
-        setGender(data.data.child.gender);               // يخزن في context
-        localStorage.setItem("gender", data.data.child.gender);  // يحدث localStorage
+        setGender(data.data.child.gender);               
+        localStorage.setItem("gender", data.data.child.gender);  
         localStorage.setItem("babyId", data.data.child.id);
         console.log(data.data.child.id)
         console.log(data.data.child.gender)
@@ -143,7 +143,6 @@ async function resetPassword() {
 
     toast.success(res.data.message);
 
-    // ✅ خفي كل المودالات
     setShowSetPassword(false);
     setShowVerifyCode(false);
     setShowForgotPassword(false);
